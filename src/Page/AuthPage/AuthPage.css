@@ -1,0 +1,74 @@
+:root{
+    --backgroundColor: #f5f0e1;
+    --bottomBarColor: #c27a2f;
+    --authContainer: #e8d9b5;
+    --focusBar: #c1782e;
+    --leftBar: #499788;
+    --textColor: #7d4427;
+}
+
+.authPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.authContainer {
+    background-color: var(--authContainer);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.authContainer .right * {
+    color: var(--textColor);
+}
+
+.authContainer .right .form-control{
+    background-color: var(--backgroundColor) !important;
+}
+
+.authContainer .right .formContainer form input[type="submit"]{
+    background-color: var(--bottomBarColor);
+    color: var(--backgroundColor);
+}
+.authContainer .right .formContainer form input[type="submit"]:hover{
+    background-color: var(--textColor) !important;
+}
+
+
+
+.authContainer .right .form-control:focus{
+    border-color: var(--focusBar) !important;
+}
+
+.authContainer .left{
+    background-color: var(--leftBar);
+    position: relative;
+    flex: 0.9;
+    z-index: 1;
+}
+
+.authContainer .left::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: block;
+    opacity: 0.2;
+    background-image: url("/img/AuthPage/backgroundCover.svg");
+    z-index: -1;
+}
+
+.authContainer .right{
+}
+
+.bottomBar{
+    background-color: var(--bottomBarColor);
+    position: absolute;
+    bottom: 0;
+}
