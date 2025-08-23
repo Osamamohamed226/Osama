@@ -24,12 +24,11 @@ function NavBar() {
         </div>
         <div className="right">
           <div className="links">
-            <Link to="#">Destinations</Link>
-            <Link to="#">Experiences</Link>
-            <Link to="#">Plan Your Trip</Link>
-            <Link to="#">About Egypt</Link>
-          </div>
-          <div className="language">
+            <Link className="flex-grow-1" to="#">Destinations</Link>
+            <Link className="flex-grow-1" to="#">Experiences</Link>
+            <Link className="flex-grow-1" to="#">Plan Your Trip</Link>
+            <Link className="flex-grow-1" to="#">About Egypt</Link>  
+            <div className="language">
             <button className="dropdown-togglee" onClick={() => setOpen(!open)}>
               🌐 English <span className="arrow">{open ? "▲" : "▼"}</span>
             </button>
@@ -43,9 +42,12 @@ function NavBar() {
               </ul>
             )}
           </div>
-          <a Link="#">
+          <a href="#">
             <button>My Itinerary</button>
           </a>
+          </div>
+           
+          
         </div>
       </div>
     </>
