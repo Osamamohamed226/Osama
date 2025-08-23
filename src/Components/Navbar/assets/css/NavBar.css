@@ -24,6 +24,12 @@
 .links {
   display: flex;
   gap: 40px;
+  text-decoration: none;
+}
+
+.links * {
+  text-decoration: none;
+  color: #873f2d;
 }
 
 .right a button {
