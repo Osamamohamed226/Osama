@@ -22,36 +22,35 @@
     overflow: hidden;
 }
 
-.authContainer .right * {
+.authContainer .row .right * {
     color: var(--textColor);
 }
 
-.authContainer .right .form-control{
+.authContainer .row .right .form-control{
     background-color: var(--backgroundColor) !important;
 }
 
-.authContainer .right .formContainer form input[type="submit"]{
+.authContainer .row .right .formContainer form input[type="submit"]{
     background-color: var(--bottomBarColor);
     color: var(--backgroundColor);
 }
-.authContainer .right .formContainer form input[type="submit"]:hover{
+.authContainer .row .right .formContainer form input[type="submit"]:hover{
     background-color: var(--textColor) !important;
 }
 
 
 
-.authContainer .right .form-control:focus{
+.authContainer .row .right .form-control:focus{
     border-color: var(--focusBar) !important;
 }
 
-.authContainer .left{
+.authContainer .row .left{
     background-color: var(--leftBar);
     position: relative;
-    flex: 0.9;
     z-index: 1;
 }
 
-.authContainer .left::before{
+.authContainer .row .left::before{
     content: '';
     width: 100%;
     position: absolute;
@@ -64,7 +63,15 @@
     z-index: -1;
 }
 
-.authContainer .right{
+.headers button{
+    border-color: var(--bottomBarColor);
+    border-bottom:  1px solid;
+    border: 0;
+    background-color: transparent;
+}
+
+.active{
+    border-bottom: 2px solid var(--bottomBarColor);
 }
 
 .bottomBar{
