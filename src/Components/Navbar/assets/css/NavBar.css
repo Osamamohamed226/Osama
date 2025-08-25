@@ -1,16 +1,15 @@
+:root {
+  --mainColor: #873f2d;
+}
+
 * {
     margin: 0;
     padding: 0;   
 }
 
-.navbarr {
+.logo {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #f0e6c9;
-}
-
-.logo {
   font-family: serif;
   color: #873f2d;
 }
@@ -24,12 +23,6 @@
 .links {
   display: flex;
   gap: 40px;
-  text-decoration: none;
-}
-
-.links * {
-  text-decoration: none;
-  color: #873f2d;
 }
 
 .buttton{
@@ -43,16 +36,6 @@
   display: inline-flex;
   justify-content:center;
   align-items:center;
-}
-
-.right a button {
-  background-color: #e1694b;
-  border: none;
-  border-radius: 6px;
-  width: 130px;
-  height: 45px;
-  color: white;
-  font-size: large;
 }
 
 .language {
@@ -99,4 +82,9 @@
 
 .dropdown-item:hover {
   background-color: #ffe6d5;
+}
+
+li * {
+  text-decoration: none;
+  color: var(--mainColor);
 }

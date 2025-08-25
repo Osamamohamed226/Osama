@@ -1,3 +1,8 @@
+:root {
+  --backgroundColor: #f0e6c9;
+  --searchColor: #f7f2e4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -75,4 +80,32 @@
   padding-top: 18px;
   font-size: large;
   color: white;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0e6c9;
+  width: 100%;
+  height: 350px;
+}
+
+.searching {
+  width: 90%;
+  height: 250px;
+  background-color: var(--searchColor);
+  border-radius: 10px;
+}
+
+.searching h2{
+  text-align: center;
+}
+
+.labels {
+  display: flex;
+}
+
+.selection {
+  
 }

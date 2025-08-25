@@ -1,6 +1,6 @@
 import NavBar from "../Components/Navbar/NavBar";
-import '../Page/HomePage.css'
-import { Link } from 'react-router-dom'
+import "../Page/HomePage.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -22,6 +22,44 @@ export default function HomePage() {
               <Link to="#" className="btn2">
                 Explore Destinations
               </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="background">
+        <div className="searching">
+          <h2>Find Your Perfect Egyptian Experience</h2>
+          <div className="dropdowns">
+            <div className="labels">
+              <p>Destination</p>
+              <p>Experience Type</p>
+              <p>Duration</p>
+            </div>
+            <div className="selection">
+              <select>
+                <option value="All destinations">All destinations</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+              </select>
+
+              <select>
+                <option value="All experiences">All destinations</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+              </select>
+
+              <select>
+                <option value="any duration">All destinations</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+                <option value="egypt">egypt</option>
+              </select>
+              <button>Search</button>
             </div>
           </div>
         </div>

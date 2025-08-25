@@ -1,57 +1,69 @@
-import React from "react";
-import "./assets/css/NavBar.css";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./assets/css/NavBar.css";
 
-const languages = [
-  "English",
-  "العربية",
-  "Français",
-  "Deutsch",
-  "Español",
-  "中文",
-];
-
-function NavBar() {
+export default function NavBar() {
+  const languages = [
+    "English",
+    "العربية",
+    "Français",
+    "Deutsch",
+    "Español",
+    "中文",
+  ];
   const [open, setOpen] = useState(false);
   return (
-    <>
-      <div className="navbarr">
-        <div className="logo">
-          <h1>
-            <i class="text-orange fa-solid fa-ankh"></i>EgyptGuide
-          </h1>
-        </div>
-        <div className="right">
-          <div className="links">
-            <Link className="flex-grow-1" to="#">Destinations</Link>
-            <Link className="flex-grow-1" to="#">Experiences</Link>
-            <Link className="flex-grow-1" to="#">Plan Your Trip</Link>
-            <Link className="flex-grow-1" to="#">About Egypt</Link>  
-            <div className="language">
-            <button className="dropdown-togglee" onClick={() => setOpen(!open)}>
-              🌐 English <span className="arrow">{open ? "▲" : "▼"}</span>
-            </button>
-            {open && (
-              <ul className="dropdown-menuu">
-                {languages.map((lang, index) => (
-                  <li key={index} className="dropdown-item">
-                    {lang}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <a href="#">
-            <button>My Itinerary</button>
-          </a>
-          </div>
-           
-          
-        </div>
+    <nav
+      className="d-flex  justify-content-between p-2 navv"
+      style={{ backgroundColor: "#f0e6c9" }}
+    >
+      <div>
+        <h1 className="logo">
+          <i class="text-orange fa-solid fa-ankh"></i>EgyptGuide
+        </h1>
       </div>
-    </>
+      <div>
+        <ul
+          className="d-flex  gap-4 justify-content-center align-items-center"
+          style={{ listStyle: "None" }}
+        >
+          <li>
+            <Link>Destenation</Link>
+          </li>
+          <li>
+            <Link>Experincess</Link>
+          </li>
+          <li>
+            <Link>Plan Your Trip</Link>
+          </li>
+          <li>
+            <Link>About Egypt</Link>
+          </li>
+          <li>
+            <div className="language">
+              <button
+                className="dropdown-togglee"
+                onClick={() => setOpen(!open)}
+              >
+                <span>🌐</span> English{" "}
+                <span className="arrow">{open ? "▲" : "▼"}</span>
+              </button>
+              {open && (
+                <ul className="dropdown-menuu">
+                  {languages.map((lang, index) => (
+                    <li key={index} className="dropdown-item">
+                      {lang}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </li>
+          <Link to="/" className="buttton">
+            My Itinerary
+          </Link>
+        </ul>
+      </div>
+    </nav>
   );
 }
-
-export default NavBar;
